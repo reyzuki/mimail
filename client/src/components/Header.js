@@ -16,8 +16,7 @@ function Header (){
              <FiMenu/>
              </IconButton>
              <div className="mail-icon">
-             <FiMail/>
-              <h3>miMail</h3>
+              <h3>MiMail</h3>
             </div>  
         </div>
 
