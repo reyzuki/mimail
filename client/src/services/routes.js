@@ -1,20 +1,20 @@
 import DashboardLayout from "../layouts/DashboardLayout";
 import Inbox from "../pages/dashboard/Inbox";
 import Compose from "../pages/dashboard/Compose";
-import Aux from "../layouts/Aux";
+import AuxLayout from "../layouts/AuxLayout";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 
 const routes = [
     {
-        layout: Aux,
+        layout: AuxLayout,
         component: Login,
         path: '/login',
         private: false,
         exact: false,
     },
     {
-        layout: Aux,
+        layout: AuxLayout,
         component: Register,
         path: '/register',
         private: false,
