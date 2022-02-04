@@ -1,14 +1,28 @@
-import React from "react";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import { Button } from '@material-ui/core';
+import Stack from '@mui/material/Stack';
 
-const Compose = () => {
 
-    console.log('compose')
-    return <div className="compose_body">
-        <input type="email" placeholder='Sender:'/>
-        <input type="email" placeholder='To:'/>
-        <input type="text" placeholder='Subject'/>
-        <textarea> Type your message</textarea>
-    </div>
+function Compose() {
+  return (
+    <Box
+    component="form"
+    sx={{
+      '& > :not(style)': { m: 1, width: '100ch' },
+    }}
+    noValidate
+    autoComplete="off"
+  >
+    <TextField id="outlined-basic" type = "email" label="Sender" variant="outlined" />
+    <TextField id="outlined-basic" label="To" variant="outlined" />
+    <TextField id="outlined-basic" label="Subject" variant="outlined" />
+    <TextField id="outlined-basic" label="Compose mail" variant="outlined" />
+    <Stack direction="row" ><Button onClick={() => {alert('Submited');}}variant="contained">Send</Button></Stack>
+    
+  </Box>
+  )
 }
 
-export default Compose
+export default Compose;
